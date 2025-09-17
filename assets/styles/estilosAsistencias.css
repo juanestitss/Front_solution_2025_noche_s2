@@ -1,0 +1,101 @@
+ body {
+      background-color: #f8f9fa;
+      padding: 20px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .header {
+      background: linear-gradient(135deg, #0062cc, #00b3b3);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .table-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    .table th {
+      background-color: #0062cc;
+      color: white;
+    }
+    .status-presente {
+      color: #198754;
+      font-weight: bold;
+    }
+    .status-ausente {
+      color: #dc3545;
+      font-weight: bold;
+    }
+    .status-tardanza {
+      color: #fd7e14;
+      font-weight: bold;
+    }
+    .actions .btn {
+      margin-right: 5px;
+    }
+    .form-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .stats-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .stats-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0062cc;
+    }
+    @media (max-width: 768px) {
+      .table thead {
+        display: none;
+      }
+      .table,
+      .table tbody,
+      .table tr,
+      .table td {
+        display: block;
+        width: 100%;
+      }
+      .table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+      }
+      .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+      .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+      }
+      .actions {
+        text-align: center !important;
+      }
+      .actions td::before {
+        display: none;
+      }
+    }
